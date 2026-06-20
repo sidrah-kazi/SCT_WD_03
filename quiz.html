@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro">
+        <h1> HELLO THERE , I AM YOUR VIVA BUDDY </h1>
+        <h2>Lets see if you are prepared for it</h2>
+        <p>Enter your topic below and lets have a rapid fire round !!</p>
+        <p>Instructions:</p>
+        <ul type="bullets"><li>You will get 30 secs to answer each question</li>
+        <li>For correct answer you will get 2 points</li>
+        <li> For an incorrect answer you wil get 0 ponts </li>
+        <li> You can also use hint button but then on correct answer you will get 1 point</li>
+        <li> After timer goes not the question will change without any update in the score </li>
+        </ul>
+        <p>ALL the Best</p>
+
+        <input type ="text" required id="topic" placeholder="Enter your topic eg. Arrays">
+        <button id="start">Start</button>
+        <p id="loading" style="display:none;">
+    Generating viva questions...
+</p>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div id="question"></div>
+            <input type="text" id="response" placeholder="Enter your answer">
+            <div id="hint"></div>
+            <div id="answer"></div>
+            <button id="submit">Submit</button>
+            <button id="hintbtn">Hint</button>
+
+        </div>
+        <div id="scores"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

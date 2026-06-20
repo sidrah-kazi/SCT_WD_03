@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #111827,
+        #1e293b
+    );
+    color: #f8fafc;
+    padding: 20px;
+}
+
+.intro,
+.card,
+.scores {
+    background: rgba(17, 24, 39, 0.95);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    box-shadow:
+        0 0 20px rgba(59, 130, 246, 0.25),
+        0 0 60px rgba(59, 130, 246, 0.15);
+    backdrop-filter: blur(12px);
+}
+.intro {
+    max-width: 700px;
+    padding: 30px;
+}
+
+.intro h1 {
+    margin-bottom: 15px;
+    color: #60a5fa;
+    text-shadow: 0 0 15px rgba(96, 165, 250, 0.7);
+}
+
+.intro h2 {
+    margin-bottom: 15px;
+    color: #cbd5e1;
+}
+
+.intro p,
+.intro li {
+    color: #e2e8f0;
+}
+
+#topic,
+#response {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    background: #1e293b;
+    color: white;
+    outline: none;
+}
+
+#topic:focus,
+#response:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+}
+#start,
+#submit,
+#hint {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+#start,
+#submit {
+    background: #2563eb;
+    color: white;
+}
+
+#start:hover,
+#submit:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 15px rgba(37, 99, 235, 0.7),
+        0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+.cards {
+    display: none;
+}
+
+.card {
+    width: 500px;
+    min-height: 320px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+#question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 70px;
+}
+
+#response {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.hint,
+.answer {
+    padding: 12px;
+    border-radius: 8px;
+    display: none;
+}
+
+.hint {
+    background: #fff4d6;
+}
+
+.answer {
+    background: #dff7df;
+}
+
+.scores {
+    display: none;
+    padding: 30px;
+    text-align: center;
+    width: 500px;
+}
+
+.scores h2 {
+    margin-bottom: 15px;
+}
+
+.scores p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
